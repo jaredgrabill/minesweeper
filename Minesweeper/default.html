@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Minesweeper</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0.RC/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
+
+    <!-- Minesweeper references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/array2D.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body id="gameBody">
+	<div class="buttonMenu">
+		<button id="easyButton">Easy</button>
+		<button id="mediumButton">Medium</button>
+		<button id="hardButton">Hard</button>
+	</div>
+	<div class="gamecontainer" data-win-control="WinJS.UI.Grid">
+		<div id="gameContainer">
+			<div id="gameHost" class="primarylayout" data-win-control="WinJS.UI.ViewBox">			
+				<div id="game" class="gameboard" ></div>			
+			</div>		
+		</div>
+		<div class="footer">
+			<div style="-ms-grid-column:1;-ms-grid-column-align:start;">
+				<span class="ui_label">
+					<img src="/images/clock.png" />
+					<label id="timeDisplay">0</label>
+				</span>
+			</div>
+			<div style="-ms-grid-column:3;-ms-grid-column-align:start;">
+				<span class="ui_label" >
+					<img src="/images/mine_white.png" />
+					<label  id="minesDisplay">10</label>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

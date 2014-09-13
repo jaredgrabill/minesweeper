@@ -1,0 +1,171 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -ms-flex-align: center;
+    -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    display: -ms-flexbox;
+}
+
+.gameboard {
+	display:-ms-grid;
+	-ms-grid-row-align:center;
+	-ms-grid-column-align:center;
+    display: -ms-grid;
+	background-color:black;
+	padding:5px;
+	box-shadow: 10px 10px #111;
+}
+
+.gamecontainer {
+	height: 100%;
+	text-align:center;
+	display:-ms-grid;
+	-ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr auto;
+	MARGIN-BOTTOM:30px;
+}
+
+.gameSquare {
+	-ms-transition: background-color 0.2s ease-in-out;
+	text-align:center;
+	margin: 2px 2px 2px 2px;
+	-ms-grid-column-align:stretch;
+	-ms-grid-row-align:stretch;
+    height: 96px;
+    width: 96px;
+	background: rgba(0,100,220,1) linear-gradient(to bottom right, rgba(80,220,255,0.5) 0%, rgba(0,100,220,0.5) 100%);
+	border-color: White;
+	border-width: 2px;
+	border-radius: 3px;
+	font-size: 62px;
+	font-weight:bold;
+	color:transparent;
+}
+
+.covered:hover {
+	-ms-transition: background-color 0.2s ease-in-out;
+	background-color: rgba(0,140,230,1);
+}
+
+.covered:active {
+	-ms-transition: background-color 0.01s ease-in;
+	background-color: rgba(0,20,120,0.4);
+}
+
+.empty {
+	background: rgba(255,255,255,0.05);
+	border-color: Black;
+	color:transparent;
+}
+
+.empty:hover {
+}
+
+.flagged {
+	-ms-transition: all 0.2s ease-in-out;
+	background: rgba(0,100,220,0.4) url(/images/flag.png) center center no-repeat;
+	border-color: Black;
+	color:transparent;
+}
+
+.numbered {
+	background: rgba(255,255,255,0.05);
+	border-color: Black;
+	color:White;
+}
+
+.hit {
+	background: rgba(255,0,0,0.15) url(/images/mine_red.png) center center no-repeat;
+	border-color: Black;
+}
+
+.mine {
+	background: rgba(255,255,255,0.05) url(/images/mine_white.png) center center no-repeat;
+	border-color: Black;
+}
+
+.primarylayout {	
+	-ms-grid-row:1;
+	-ms-grid-row-align:stretch;
+	-ms-grid-column-align:center;
+	text-align:center;
+	vertical-align:middle;
+	--position:absolute;
+	margin: 40px 40px 40px 0px;
+	height: 95%;
+}
+
+.header{
+	text-align:center;
+	margin: 20px 0 10px 0px;
+	-ms-grid-row: 1;
+}
+
+.buttonMenu{
+	float:left;
+	position:absolute;
+	left:30px;
+	bottom:30px;
+	text-align:center;
+}
+
+.buttonMenu button{
+	--display:block;
+	margin:0 0 10px 10px;
+}
+
+.footer{
+	display:-ms-grid;
+	-ms-grid-column-align:center;
+	height:40px;
+	-ms-grid-row:2;
+	-ms-grid-columns: 200px 200px 200px;	
+	--position:absolute;
+	margin: 30px 90px 50px 0px;
+	left:0px;
+	right:0px;
+	bottom: 20px;
+	width: 400px;
+	text-align:center;
+}
+
+.gameoveroverlay{
+	-ms-grid-row: 1;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.gameSquare{
+}
+
+.ui_label img{
+	width:32px;
+	height:32px;
+	vertical-align:super;
+	margin: 0 5px 3px 0;
+	opacity:1;
+	}
+	
+.ui_label label{
+	-ms-grid-column-align:start;
+	font-size:50px;
+	vertical-align:baseline;
+	width:200px;
+	}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
